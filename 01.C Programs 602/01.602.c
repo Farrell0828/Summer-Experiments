@@ -6,7 +6,7 @@ void OutAll(char** names, int* outed_flag, size_t n, size_t M, size_t first) {
 	size_t pointed_sub = first;
 	size_t outed_number = 0;
 
-	while (1) {
+	while (outed_number != n) {
 		if (outed_flag[pointed_sub] == 0) {
 			counted_number++;
 			if (counted_number == M) {
@@ -17,10 +17,6 @@ void OutAll(char** names, int* outed_flag, size_t n, size_t M, size_t first) {
 			}
 		}
 		pointed_sub = (pointed_sub + 1) % n;
-		
-		if (outed_number == n) {
-			break;
-		}
 	}
 	return;
 }
