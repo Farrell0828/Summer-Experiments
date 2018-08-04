@@ -11,9 +11,10 @@ int IsAlphabet(char c) {
 	}
 }
 
+
 int main() {
 	char string[101];
-	printf("Please enter the string. No more than 100 characters: ");
+	printf("Please enter the string. No more than 100 characters. End with space: ");
 	scanf("%s", string);
 
 	int i = 0, count = 0;
