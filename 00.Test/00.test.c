@@ -1,17 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+// 哈夫曼结点结构定义
+typedef struct {
+	char ch;
+	int parent;
+	int lchild;
+	int rchild;
+	int weight;
+}HuffmanTreeNode;
 
-	int a;
-
-	if (scanf("%d", &a)) {
-		printf("Right\n");
-	}
-	else {
-		printf("Wrong\n");
-	}
-
-	system("pause");
-	return 0;
-}
