@@ -57,6 +57,7 @@ int LinearInsert(LinearElement hash_table[], LinearElement item) {
 	return 0;
 }
 
+// 拉链法的插入函数, 插入成功返回1, 否则返回0
 int ChainInsert(ChainElement* hash_table[], ChainElement item) {
 	int hash_value = Hash(item.key);
 	ChainElement* p = hash_table[hash_value];
@@ -88,12 +89,14 @@ int ChainInsert(ChainElement* hash_table[], ChainElement item) {
 	return 1;
 }
 
+// 线性探测法的哈希表展示
 void ShowLinearTable(LinearElement hash_table[]) {
 	for (int i = 0; i < TABLE_SIZE; i++) {
 		printf("%d: %d\n", i, hash_table[i].key);
 	}
 }
 
+// 拉链法的哈希表展示
 void ShowChainTable(ChainElement* hash_table[]) {
 	for (int i = 0; i < TABLE_SIZE; i++) {
 		printf("%d: ", i);
