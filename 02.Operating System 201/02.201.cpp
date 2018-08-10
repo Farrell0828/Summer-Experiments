@@ -95,7 +95,7 @@ PCB* ChooseOne(const vector<PCB*>& arrived_pcbs) {
 			// 如果到达时间也相同
 			if (x->arrive_time == temp->arrive_time) {
 				// 选剩余还需运行时间(总需运行时间need_time减去已使用CPU时间used_time)较小的那个
-				if ((x->need_time - x->used_time) < 
+				if ((x->need_time - x->used_time) <
 					(temp->need_time - temp->used_time)) {
 					temp = x;
 				}
